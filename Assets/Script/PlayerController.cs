@@ -35,22 +35,7 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-         // if (transform.position.x < min.x)
-         // {
-         //     _rb.AddForce(new Vector2(1,0));
-         // }
-         // else if (transform.position.y > max.x)
-         // {
-         //     _rb.AddForce(new Vector2(-1,0));
-         // }
-            
          _rb.velocity = _movement * _speed;
-        
-         // if(transform.position.y <= _maxUpPosition)
-         //     _rb.velocity = _movement * _speed;
-         // else
-         //     _rb.velocity = Vector2.zero;
-
     }
 
     private void OnMove(InputValue inputValue)
@@ -62,7 +47,7 @@ public class PlayerController : MonoBehaviour
     {
         if (_canShoot)
         {
-            Instantiate(_bullet, transform);
+            Instantiate(_bullet, new Vector3(Mathf.Clamp(transform.position.x, min.x, max.x), Mathf.Clamp(transform.position.y, min.y, max.y), 0), Quaternion.identity);
             StartCoroutine(Cooldown(_cooldown));
         }
     }
