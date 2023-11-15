@@ -244,11 +244,11 @@ MonoBehaviour:
   spawnPos: {fileID: 1510053986}
   rightWall: {fileID: 652206003}
   leftWall: {fileID: 976749033}
-  enemyOffset: 1.5
-  nbEnemyPerLine: 6
+  enemyOffset: 1
+  nbEnemyPerLine: 8
   nbLine: 3
   listEnemies: []
-  lineOffset: 0.5
+  lineOffset: 0
 --- !u!4 &921917423
 Transform:
   m_ObjectHideFlags: 0
