@@ -42,6 +42,9 @@ public class EnemyManager : MonoBehaviour
 
     public void Update()
     {
+        if (listEnemies == null || listEnemies.Count < 0)
+            return;
+
         if(listEnemies.Max(i => i.transform.position.x) > rightWall.transform.position.x && direction == Vector3.right || listEnemies.Min(i => i.transform.position.x) < leftWall.transform.position.x && direction == Vector3.left)
         {
             ChangeLine();
@@ -55,5 +58,11 @@ public class EnemyManager : MonoBehaviour
         {
             e.transform.position += Vector3.down * lineOffset;
         });
+    }
+
+    public void Kill(EnemyBehaviour enemy)
+    {
+        listEnemies.Remove(enemy);
+        Destroy(enemy.gameObject);
     }
 }

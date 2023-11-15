@@ -21,15 +21,19 @@ public class Bullet : MonoBehaviour
         StartCoroutine(FlyingTIme(_flyingTime));
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        Debug.Log("hey");
-        Destroy(gameObject);
-    }
-
     IEnumerator FlyingTIme(float flyingTime)
     {
         yield return new WaitForSeconds(flyingTime);
         Destroy(gameObject);
+    }
+
+    public void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision != null && collision.gameObject.tag == "Enemy") 
+        {
+            collision.gameObject.TryGetComponent(out EnemyBehaviour enemmy);
+            enemmy.Death();
+            Destroy(gameObject);
+        }
     }
 }

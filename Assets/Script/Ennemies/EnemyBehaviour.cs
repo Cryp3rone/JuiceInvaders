@@ -26,4 +26,9 @@ public class EnemyBehaviour : MonoBehaviour
     {
         transform.position += manager.Direction * speed * Time.deltaTime;
     }
+
+    public void Death()
+    {
+        manager.Kill(this);
+    }
 }
