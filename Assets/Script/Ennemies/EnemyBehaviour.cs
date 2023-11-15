@@ -3,9 +3,10 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-public class EnemyBehavoir : MonoBehaviour
+public class EnemyBehaviour : MonoBehaviour
 {
     [SerializeField] private float speed;
+
     private Vector3 direction;
     public Vector3 Direction 
     { 
@@ -13,14 +14,16 @@ public class EnemyBehavoir : MonoBehaviour
         set { direction = value; }
     }
 
-    void Start()
+    private EnemyManager manager;
+    public EnemyManager Manager
     {
-        
+        get { return manager; }
+        set { manager = value; }
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        transform.position += manager.Direction * speed * Time.deltaTime;
     }
 }
