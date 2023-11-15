@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2525006191022594274}
   - component: {fileID: 8343027495705302377}
   m_Layer: 0
-  m_Name: Particle System
+  m_Name: "Fum\xE9e"
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
