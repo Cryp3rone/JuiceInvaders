@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c52baaebc2698a84ead50dbf6a71343e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  min: {x: -5, y: 5}
-  max: {x: 0, y: 0}
+  min: {x: -7, y: -4}
+  max: {x: 7, y: -3}
   _speed: 10
   _cooldown: 0.5
   _bullet: {fileID: 778398597364795798, guid: db064dc2538e8c245a919c4b5e88213b, type: 3}
