@@ -30,19 +30,26 @@ public class PlayerController : MonoBehaviour
     private void Update()
     {
         transform.position = new Vector2(
-            Mathf.Clamp(transform.position.x, min.x, max.x),0);
+            Mathf.Clamp(transform.position.x, min.x, max.x),Mathf.Clamp(transform.position.y, min.y, max.y));
     }
 
     void FixedUpdate()
     {
-        transform.position = _movement * _speed;
+         // if (transform.position.x < min.x)
+         // {
+         //     _rb.AddForce(new Vector2(1,0));
+         // }
+         // else if (transform.position.y > max.x)
+         // {
+         //     _rb.AddForce(new Vector2(-1,0));
+         // }
             
-        _rb.velocity = _movement * _speed;
+         _rb.velocity = _movement * _speed;
         
-        // if(transform.position.y <= _maxUpPosition)
-        //     _rb.velocity = _movement * _speed;
-        // else
-        //     _rb.velocity = Vector2.zero;
+         // if(transform.position.y <= _maxUpPosition)
+         //     _rb.velocity = _movement * _speed;
+         // else
+         //     _rb.velocity = Vector2.zero;
 
     }
 
