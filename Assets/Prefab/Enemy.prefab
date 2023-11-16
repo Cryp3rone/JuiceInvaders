@@ -233,6 +233,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00a4807d159a6a646bbc53bf26a7bcf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  offsetMax: 0.3
+  offsetMaxMvt: 0.15
   duration: 8
   maxAngle: 0.309
   curve:
