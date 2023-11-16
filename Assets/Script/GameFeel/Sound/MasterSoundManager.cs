@@ -47,8 +47,6 @@ public class MasterSoundManager : MonoBehaviour
                 DontDestroyOnLoad(this.gameObject);
             }
 
-
-  
             if(PlayThemeSongOnAwake)
             {
                 ChangeThemeSong(0);
@@ -56,7 +54,15 @@ public class MasterSoundManager : MonoBehaviour
 
             done = true;
         }
-        
+    }
+
+    private void Start()
+    {
+        GameFeelManager gameFeelManager = GameFeelManager.instance;
+
+        gameFeelManager.OnToggleThemeSong.AddListener(i => ChangeState(i, "ThemeSong"));
+        gameFeelManager.OnToggleHitSong.AddListener(i => ChangeState(i, "Tirs"));
+        gameFeelManager.OnToggleFlowerDeathSong.AddListener(i => ChangeState(i, "FlowerDeath"));
     }
 
     public void Play (string name)
@@ -117,6 +123,11 @@ public class MasterSoundManager : MonoBehaviour
         SoundClass sFound = Array.Find(Sounds, sound => sound.name == name);
         sFound.source.Stop();
     }
-    
+
+    public void ChangeState(bool isActive,string name)
+    {
+        SoundClass sFound = Array.Find(Sounds, sound => sound.name == name);
+        sFound.source.volume = isActive ? sFound.defaultVolume : 0;
+    }
 }
     

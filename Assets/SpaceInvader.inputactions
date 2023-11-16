@@ -58,6 +58,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "ThemeSongToggle",
+                    "type": "Button",
+                    "id": "834df85c-6a4f-40ed-9777-755a5536f6bd",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "HitSongToggle",
+                    "type": "Button",
+                    "id": "94c6f15a-4f56-445f-b034-68cb85bc427d",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "FlowerDeathToggle",
+                    "type": "Button",
+                    "id": "4e2cea74-abdb-4e61-96b9-bf483630363c",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -322,6 +349,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "PostProcessToggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "6d1e6ca0-368d-45d2-9cd2-62d1cc808b95",
+                    "path": "<Keyboard>/4",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ThemeSongToggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "2ee9f23f-7513-41a9-a96d-3bc1bf80e4f3",
+                    "path": "<Keyboard>/5",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "HitSongToggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5b62b897-cf6e-4ed9-820f-4555d6457eeb",
+                    "path": "<Keyboard>/6",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "FlowerDeathToggle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

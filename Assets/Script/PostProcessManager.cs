@@ -29,6 +29,7 @@ public class PostProcessManager : MonoBehaviour
         _volume.profile.TryGet(out _colorAdjustement);
 
         _camera.GetUniversalAdditionalCameraData().renderPostProcessing = false;
+        Debug.Log(_camera.GetUniversalAdditionalCameraData());
     }
 
     private void Start()

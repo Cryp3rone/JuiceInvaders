@@ -15,13 +15,27 @@ public class GameFeelManager : MonoBehaviour
     public UnityEvent<bool> OnTogglePostProcess = new UnityEvent<bool>();
     public bool allowPostProcess;
 
-    public void Start()
+    public UnityEvent<bool> OnToggleThemeSong = new UnityEvent<bool>();
+    public bool allowThemeSong;
+    public UnityEvent<bool> OnToggleHitSong = new UnityEvent<bool>();
+    public bool allowHitSong;
+    public UnityEvent<bool> OnToggleFlowerDeathSong = new UnityEvent<bool>();
+    public bool allowFlowerDeathSong;
+
+
+    private void Awake()
     {
         instance = this;
+    }
 
+    public void Start()
+    {
         allowParticule = false;
         allowSprite = false;
         allowPostProcess = false;
+        allowThemeSong = false;
+        allowHitSong = false;
+        allowFlowerDeathSong = false;
     }
 
     public void OnParticuleToggle(InputValue inputValue)
@@ -40,6 +54,24 @@ public class GameFeelManager : MonoBehaviour
     {
         allowSprite = !allowSprite;
         OnToggleSprite.Invoke(allowSprite);
+    }
+
+    public void OnThemeSongToggle(InputValue inputValue)
+    {
+        allowThemeSong = !allowThemeSong;
+        OnToggleThemeSong.Invoke(allowThemeSong);
+    }
+
+    public void OnHitSongToggle(InputValue inputValue)
+    {
+        allowHitSong = !allowHitSong;
+        OnToggleHitSong.Invoke(allowHitSong);
+    }
+
+    public void OnFlowerDeathToggle(InputValue inputValue)
+    {
+        allowFlowerDeathSong = !allowFlowerDeathSong;
+        OnToggleFlowerDeathSong.Invoke(allowFlowerDeathSong);
     }
 
 }

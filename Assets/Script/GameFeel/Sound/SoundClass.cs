@@ -13,6 +13,9 @@ public class SoundClass
     [Range(0f, 1f)]
     public float volume = .5f;
 
+    [Range(0f, 1f)]
+    public float defaultVolume = .5f;
+
     [Range(-3f, 3f)]
     public float pitch = 1;
 
