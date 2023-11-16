@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3461829810503306563
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6290087800234451722}
+  - component: {fileID: 5588159653393661759}
+  m_Layer: 0
+  m_Name: SoundManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6290087800234451722
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3461829810503306563}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5588159653393661759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3461829810503306563}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a94171fa0b933c64d8a1cb234e5b8227, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Sounds:
+  - name: ThemeSong
+    clips:
+    - {fileID: 8300000, guid: 3e9e1d65099d6e54aa2181410671b301, type: 3}
+    volume: 0.14
+    pitch: 1
+    loop: 1
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: Tirs
+    clips:
+    - {fileID: 8300000, guid: 870d79b097b878947bfc33d00cafee20, type: 3}
+    - {fileID: 8300000, guid: 632f65d26b7a22a4e86747dd946db5ba, type: 3}
+    - {fileID: 8300000, guid: 324daee538598c64ebdfe0e504145c8d, type: 3}
+    - {fileID: 8300000, guid: 2706852e04516c148b35e090080173e6, type: 3}
+    - {fileID: 8300000, guid: 1a7093c956ae0dd4fa9cb32410af481e, type: 3}
+    volume: 0.223
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  - name: FlowerDeath
+    clips:
+    - {fileID: 8300000, guid: 624b8ae4150c42c489a6e3508e196230, type: 3}
+    - {fileID: 8300000, guid: dd05cb7e3c48fce48b14c24619daf25e, type: 3}
+    - {fileID: 8300000, guid: af636d44cb3bb9542837d60bb8052f87, type: 3}
+    - {fileID: 8300000, guid: 93fa1f895e4a5cb4ca8ea038c780386b, type: 3}
+    - {fileID: 8300000, guid: 26c2c0f550bf13a4e82e04bf09e4a25a, type: 3}
+    - {fileID: 8300000, guid: 02615977c62ae47498afdec831e61c31, type: 3}
+    - {fileID: 8300000, guid: 2953f308aa71445428814a4a3780b9b6, type: 3}
+    volume: 0.182
+    pitch: 1
+    loop: 0
+    playOnAwake: 0
+    source: {fileID: 0}
+  PlayThemeSongOnAwake: 1
+  pressed: 0
+  shouldDestroyOnLoad: 0
