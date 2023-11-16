@@ -21,6 +21,7 @@ public class GameFeelManager : MonoBehaviour
 
         allowParticule = false;
         allowSprite = false;
+        allowPostProcess = false;
     }
 
     public void OnParticuleToggle(InputValue inputValue)
@@ -29,7 +30,7 @@ public class GameFeelManager : MonoBehaviour
         OnToggleParticule.Invoke(allowParticule);
     }
 
-    public void OnPostprocessToggle(InputValue inputValue) 
+    public void OnPostProcessToggle(InputValue inputValue) 
     {
         allowPostProcess = !allowPostProcess;
         OnTogglePostProcess.Invoke(allowPostProcess);

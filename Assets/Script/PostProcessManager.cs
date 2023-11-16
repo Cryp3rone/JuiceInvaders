@@ -11,37 +11,58 @@ using Random = UnityEngine.Random;
 public class PostProcessManager : MonoBehaviour
 {
     [Header("Ref")]
+    [SerializeField] private Camera _camera;
     [SerializeField] private Volume _volume;
     [SerializeField] private ChromaticAberration _chromaticAberration;
     [SerializeField] private ColorAdjustments _colorAdjustement;
 
     [Header("Variables")]
     [SerializeField] private float _chromaAberationSpeed;
-    [FormerlySerializedAs("_colorAdjusementSpeed")] [SerializeField] private float _colorAdjustementSpeed;
-    
+    [SerializeField] private float _colorAdjustementSpeed;
+
+    private bool isActive;
     private bool isChangingChroma;
     private bool isChangingColor;
     private void Awake()
     {
         _volume.profile.TryGet(out _chromaticAberration);
         _volume.profile.TryGet(out _colorAdjustement);
+
+        _camera.GetUniversalAdditionalCameraData().renderPostProcessing = false;
+    }
+
+    private void Start()
+    {
+        GameFeelManager.instance.OnTogglePostProcess.AddListener(TogglePostProcess); 
+    }
+
+    private void OnDestroy()
+    {
+        GameFeelManager.instance.OnTogglePostProcess.RemoveListener(TogglePostProcess);
     }
 
     private void Update()
     {
-        var actualChroma = _chromaticAberration.intensity.value;
-        if (!isChangingChroma)
-        {
-            float random = Random.Range(.7f, 1f);
-            StartCoroutine(ChangeChromaValue(_chromaticAberration, actualChroma, random, _chromaAberationSpeed));
-        }
         
-        var actualColorCurve = _colorAdjustement.hueShift.value;
-        if (!isChangingColor)
-        {
-            float random = Random.Range(-180f, 180f);
-            StartCoroutine(ChangeColorHueValue(_colorAdjustement, actualColorCurve, random, _colorAdjustementSpeed));
-        }
+            var actualChroma = _chromaticAberration.intensity.value;
+            if (!isChangingChroma)
+            {
+                float random = Random.Range(.7f, 1f);
+                StartCoroutine(ChangeChromaValue(_chromaticAberration, actualChroma, random, _chromaAberationSpeed));
+            }
+        
+            var actualColorCurve = _colorAdjustement.hueShift.value;
+            if (!isChangingColor)
+            {
+                float random = Random.Range(-180f, 180f);
+                StartCoroutine(ChangeColorHueValue(_colorAdjustement, actualColorCurve, random, _colorAdjustementSpeed));
+            }
+        
+    }
+
+    private void TogglePostProcess(bool value)
+    {
+        _camera.GetUniversalAdditionalCameraData().renderPostProcessing = value; 
     }
     
     IEnumerator ChangeChromaValue(ChromaticAberration target ,float v_start, float v_end, float duration )
