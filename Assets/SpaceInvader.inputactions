@@ -85,6 +85,33 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "BackGroundToggle",
+                    "type": "Button",
+                    "id": "8a3226b8-0f40-465e-8227-81750aa1d469",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "AnimToggle",
+                    "type": "Button",
+                    "id": "ef6d159c-1a7a-4031-8582-c63568249f77",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "DistorsionToggle",
+                    "type": "Button",
+                    "id": "88821ce9-7d9b-4593-8f2b-5fb2e334c95e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -382,6 +409,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "FlowerDeathToggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cacfdeee-7d39-4834-8b75-2c87f5ab0299",
+                    "path": "<Keyboard>/7",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "BackGroundToggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "08e937ae-bac3-4335-a7cc-6173c2d052b3",
+                    "path": "<Keyboard>/8",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "AnimToggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d3c327f1-afa3-4d29-9cec-968449e2931d",
+                    "path": "<Keyboard>/9",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "DistorsionToggle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
