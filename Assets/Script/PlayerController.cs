@@ -45,6 +45,7 @@ public class PlayerController : MonoBehaviour
         if (_canShoot)
         {
             Instantiate(_bullet, new Vector3(Mathf.Clamp(transform.position.x, min.x, max.x), Mathf.Clamp(transform.position.y, min.y, max.y), 0), Quaternion.identity);
+            MasterSoundManager.instance.Play("Tirs");
             StartCoroutine(Cooldown(_cooldown));
         }
     }

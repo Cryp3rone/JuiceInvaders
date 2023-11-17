@@ -30,5 +30,6 @@ public class EnemyBehaviour : MonoBehaviour
     public void Death()
     {
         manager.Kill(this);
+        MasterSoundManager.instance.Play("FlowerDeath");
     }
 }
