@@ -733,6 +733,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4811091150511925131, guid: 9cd2c27a1408cd044bc302873a3e37ff, type: 3}
+      propertyPath: backGroud
+      value: 
+      objectReference: {fileID: 237600003}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -751,12 +755,20 @@ PrefabInstance:
       value: SoundManager
       objectReference: {fileID: 0}
     - target: {fileID: 5588159653393661759, guid: c70ea0e4bb46d524a945b4882790b662, type: 3}
+      propertyPath: PlayThemeSongOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5588159653393661759, guid: c70ea0e4bb46d524a945b4882790b662, type: 3}
       propertyPath: Sounds.Array.data[1].volume
       value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 5588159653393661759, guid: c70ea0e4bb46d524a945b4882790b662, type: 3}
       propertyPath: Sounds.Array.data[2].volume
       value: 0.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5588159653393661759, guid: c70ea0e4bb46d524a945b4882790b662, type: 3}
+      propertyPath: Sounds.Array.data[0].playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5588159653393661759, guid: c70ea0e4bb46d524a945b4882790b662, type: 3}
       propertyPath: Sounds.Array.data[0].defaultVolume

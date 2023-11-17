@@ -20,11 +20,22 @@ public class MvtObjRandom : MonoBehaviour
     Transform firstPos;
     float timeSinceStarted = 0f;
 
+    Coroutine corout;
+
     // Start is called before the first frame update
     void Awake()
     {
-        StartCoroutine(Movement());
-        
+        GameFeelManager.instance.OnToggleRandomObject.AddListener(RandomObject);
+    }
+
+    public void RandomObject(bool b)
+    {
+        if (!b)
+        {
+            StopCoroutine(corout); return;
+        }
+        corout = StartCoroutine(Movement());
+
     }
 
     // void Update()
@@ -62,7 +73,7 @@ public class MvtObjRandom : MonoBehaviour
         
         
         yield return new WaitForSeconds(Random.Range(minWait, maxWait));
-        StartCoroutine(Movement());
+        corout = StartCoroutine(Movement());
     }
 
 }

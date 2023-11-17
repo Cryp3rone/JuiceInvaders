@@ -112,6 +112,15 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
+                },
+                {
+                    "name": "RandomObjectToggle",
+                    "type": "Button",
+                    "id": "eb3aadc7-9938-4d07-aa6e-dc79544b93d9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -442,6 +451,17 @@
                     "processors": "",
                     "groups": "",
                     "action": "DistorsionToggle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "79398636-5fd6-4d6f-a10d-e460df3885b6",
+                    "path": "<Keyboard>/0",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "RandomObjectToggle",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

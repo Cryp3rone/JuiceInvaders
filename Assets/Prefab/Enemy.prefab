@@ -150,9 +150,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30d7243de4e7c3f43bebd0f77c28a087, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  skin: {fileID: 21300000, guid: 435bb5b9f2bec8b4ebb6ef1632affeef, type: 3}
+  skin: {fileID: 21300000, guid: e47b00c21546ef744a9ea8b82164616a, type: 3}
   noskin: {fileID: 21300000, guid: ac6a00b4f8d666d489a4de72f46353a7, type: 3}
   spriteRenderer: {fileID: 6588017785835732739}
+  randomColor: {r: 0, g: 0, b: 0, a: 0}
+  changeColor: 1
 --- !u!114 &1484714884743265845
 MonoBehaviour:
   m_ObjectHideFlags: 0

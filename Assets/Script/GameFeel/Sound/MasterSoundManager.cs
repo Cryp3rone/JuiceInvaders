@@ -63,6 +63,8 @@ public class MasterSoundManager : MonoBehaviour
         gameFeelManager.OnToggleThemeSong.AddListener(i => ChangeState(i, "ThemeSong"));
         gameFeelManager.OnToggleHitSong.AddListener(i => ChangeState(i, "Tirs"));
         gameFeelManager.OnToggleFlowerDeathSong.AddListener(i => ChangeState(i, "FlowerDeath"));
+
+        Play("ThemeSong");
     }
 
     public void Play (string name)
