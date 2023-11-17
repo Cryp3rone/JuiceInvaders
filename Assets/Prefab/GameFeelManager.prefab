@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4674832306976004045}
   - component: {fileID: 6525225857269344536}
   - component: {fileID: 561760053558249580}
+  - component: {fileID: 4811091150511925131}
   m_Layer: 0
   m_Name: GameFeelManager
   m_TagString: Untagged
@@ -114,6 +115,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   particule: {fileID: 3556012383843939522}
+--- !u!114 &4811091150511925131
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4091907906649067380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0c7d7da124d687641940e4fa35974b95, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  backGroud: {fileID: 0}
 --- !u!1001 &1154957182960716797
 PrefabInstance:
   m_ObjectHideFlags: 0

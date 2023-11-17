@@ -32,13 +32,25 @@ public class HoverMovement : MonoBehaviour
 
     public float maxMvt = 1;
 
+    public Coroutine coroutineA, coroutineMvt;
+
     void Awake()
     {
+        GameFeelManager.instance.OnToggleAnim.AddListener(ToggleAnim);
+    }
+
+    public void ToggleAnim(bool b)
+    {
+        if(!b)
+        {
+            StopCoroutine(coroutineMvt);
+            StopCoroutine(coroutineA);
+            return;
+        }
         offset = Random.Range(-offsetMax, offsetMax);
         offsetMvt = Random.Range(-offsetMaxMvt, offsetMaxMvt);
-        StartCoroutine(Animate());
-        StartCoroutine(AnimateMvt());
-        
+        coroutineA = StartCoroutine(Animate());
+        coroutineMvt = StartCoroutine(AnimateMvt());
     }
 
 
@@ -60,7 +72,7 @@ public class HoverMovement : MonoBehaviour
             }
             yield return null;
         }
-        StartCoroutine(Animate());
+        coroutineA = StartCoroutine(Animate());
     }
 
     IEnumerator AnimateMvt()
@@ -84,6 +96,6 @@ public class HoverMovement : MonoBehaviour
 
             yield return null;
         }
-        StartCoroutine(AnimateMvt());
+        coroutineMvt = StartCoroutine(AnimateMvt());
     }
 }
