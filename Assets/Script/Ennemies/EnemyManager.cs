@@ -11,6 +11,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private int nbEnemyPerLine, nbLine;
     [SerializeField] private List<EnemyBehaviour> listEnemies = new List<EnemyBehaviour>();
     [SerializeField] private float lineOffset;
+    [SerializeField] private ParticleSystem deathParticule;
     private Vector3 direction;
     public Vector3 Direction
     {
@@ -42,7 +43,7 @@ public class EnemyManager : MonoBehaviour
 
     public void Update()
     {
-        if (listEnemies == null || listEnemies.Count < 0)
+        if (listEnemies == null || listEnemies.Count <= 0)
             return;
 
         if(listEnemies.Max(i => i.transform.position.x) > rightWall.transform.position.x && direction == Vector3.right || listEnemies.Min(i => i.transform.position.x) < leftWall.transform.position.x && direction == Vector3.left)
@@ -63,6 +64,8 @@ public class EnemyManager : MonoBehaviour
     public void Kill(EnemyBehaviour enemy)
     {
         listEnemies.Remove(enemy);
+        deathParticule.transform.position = enemy.transform.position;
+        deathParticule.Play();
         Destroy(enemy.gameObject);
     }
 }

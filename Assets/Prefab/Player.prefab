@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7133264093116210798}
   - component: {fileID: 6061538305276678870}
   - component: {fileID: 3967854615211639005}
+  - component: {fileID: 4285129424597884153}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -80,8 +81,8 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
-  m_DrawMode: 0
-  m_Size: {x: 1, y: 1}
+  m_DrawMode: 1
+  m_Size: {x: 1.6, y: 1.73}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
@@ -161,3 +162,18 @@ MonoBehaviour:
   m_DefaultActionMap: Player
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
+--- !u!114 &4285129424597884153
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 485070738509829607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 30d7243de4e7c3f43bebd0f77c28a087, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  skin: {fileID: 21300000, guid: 79a64dd15ad8f144781faa95e510b504, type: 3}
+  noskin: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  spriteRenderer: {fileID: 7404676805316734144}

@@ -322,7 +322,7 @@
                 {
                     "name": "",
                     "id": "11e6d4e7-6427-447c-b478-a3047eef2909",
-                    "path": "<Keyboard>/1",
+                    "path": "<Keyboard>/2",
                     "interactions": "",
                     "processors": "",
                     "groups": "Keyboard&Mouse",
@@ -333,7 +333,7 @@
                 {
                     "name": "",
                     "id": "012a067a-300d-4670-8015-75573295985f",
-                    "path": "<Keyboard>/2",
+                    "path": "<Keyboard>/1",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -344,7 +344,7 @@
                 {
                     "name": "",
                     "id": "e23e9c43-5748-4986-8c0d-b5661c59eede",
-                    "path": "<Keyboard>/3",
+                    "path": "<Keyboard>/6",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -355,7 +355,7 @@
                 {
                     "name": "",
                     "id": "6d1e6ca0-368d-45d2-9cd2-62d1cc808b95",
-                    "path": "<Keyboard>/4",
+                    "path": "<Keyboard>/3",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -366,7 +366,7 @@
                 {
                     "name": "",
                     "id": "2ee9f23f-7513-41a9-a96d-3bc1bf80e4f3",
-                    "path": "<Keyboard>/5",
+                    "path": "<Keyboard>/4",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -377,7 +377,7 @@
                 {
                     "name": "",
                     "id": "5b62b897-cf6e-4ed9-820f-4555d6457eeb",
-                    "path": "<Keyboard>/6",
+                    "path": "<Keyboard>/5",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

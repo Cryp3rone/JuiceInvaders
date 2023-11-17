@@ -36,6 +36,13 @@ public class GameFeelManager : MonoBehaviour
         allowThemeSong = false;
         allowHitSong = false;
         allowFlowerDeathSong = false;
+
+        OnToggleParticule.Invoke(false);
+        OnToggleSprite.Invoke(false);
+        OnTogglePostProcess.Invoke(false);
+        OnToggleThemeSong.Invoke(false); 
+        OnToggleHitSong.Invoke(false);
+        OnToggleFlowerDeathSong.Invoke(false);
     }
 
     public void OnParticuleToggle(InputValue inputValue)
